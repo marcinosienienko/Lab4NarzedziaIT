@@ -9,10 +9,10 @@ echo "--help wyświetli listę dostępnych opcji"
 
 while [ "$1" != "" ]; do
 	case $1 in
-	--date)
+	--date|-d)
 		shift
 		date;;
-	--logs)
+	--logs|-l)
 		shift
 		if [ -z "$1" ]
 		then
@@ -27,7 +27,7 @@ while [ "$1" != "" ]; do
 			echo date>>log$i.txt
 		shift
 		done;;
-	--help)
+	--help|-h)
 		shift
 		help;;
 	*)
