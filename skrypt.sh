@@ -21,8 +21,8 @@ while [ "$1" != "" ]; do
 			a=$1
 		fi
 		for i in `seq 1 $a`; do
-			touch log$i.txt
-			echo "log$i.txt">>log$i.txt
+			touch log$i/log$i.txt
+			echo "log$i/log$i.txt">>log$i.txt
 			echo "skrypt.sh">>log$i.txt
 			echo date>>log$i.txt
 		shift
