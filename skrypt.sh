@@ -1,10 +1,10 @@
 help()
 {
 echo "Lista dostępnych opcji: "
-echo "--date #wyświetli dzisiejszą datę"
-echo "--logs utworzy automatycznie 100 plików logx.txt x-nrpliku od 1 do100 plik zawiera nazwę, nazwę skryptu, datę"
-echo "--logs a utworzy automatycznie a plików logx.txt x-nr pliku od 1 do 100 plik zawiera nazwę, nazwę skryptu, datę"
-echo "--help wyświetli listę dostępnych opcji"
+echo "--date lub -d #wyświetli dzisiejszą datę"
+echo "--logs lub -l utworzy automatycznie 100 plików logx.txt x-nrpliku od 1 do100 plik zawiera nazwę, nazwę skryptu, datę"
+echo "--logs a lub l a utworzy automatycznie a plików logx.txt x-nr pliku od 1 do 100 plik zawiera nazwę, nazwę skryptu, datę"
+echo "--help lub -h wyświetli listę dostępnych opcji"
 }
 
 while [ "$1" != "" ]; do
@@ -30,7 +30,12 @@ while [ "$1" != "" ]; do
 	--help|-h)
 		shift
 		help;;
-	*)
+	--init)
+		shift
+		git clone https://github.com/pepe32321/NarzIT_Lab4_PJA
+		PATH="$(pwd)/NarzIT_Lab4_PJA"
+	;;
+*)
 		;;
 	esac
 done
