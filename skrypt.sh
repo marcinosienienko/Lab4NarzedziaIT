@@ -1,3 +1,12 @@
+help()
+{
+echo "Lista dostępnych opcji: "
+echo "--date #wyświetli dzisiejszą datę"
+echo "--logs utworzy automatycznie 100 plików logx.txt x-nrpliku od 1 do100 plik zawiera nazwę, nazwę skryptu, datę"
+echo "--logs a utworzy automatycznie a plików logx.txt x-nr pliku od 1 do 100 plik zawiera nazwę, nazwę skryptu, datę"
+echo "--help wyświetli listę dostępnych opcji"
+}
+
 while [ "$1" != "" ]; do
 	case $1 in
 	--date)
@@ -18,6 +27,9 @@ while [ "$1" != "" ]; do
 			echo date>>log$i.txt
 		shift
 		done;;
+	--help)
+		shift
+		help;;
 	*)
 		;;
 	esac
