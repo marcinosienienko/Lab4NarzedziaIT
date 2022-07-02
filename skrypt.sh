@@ -27,6 +27,21 @@ while [ "$1" != "" ]; do
 			echo date>>log$i.txt
 		shift
 		done;;
+ 	--error|-e)
+                shift
+                if [ -z "$1" ]
+                then
+                        a=100
+                else
+                        a=$1
+                fi
+                for i in `seq 1 $a`; do
+                        touch error$i/error$i.txt
+                        echo "error$i/error$i.txt">>error$i.txt
+                        echo "skrypt.sh">>error$i.txt
+                        echo date>>error$i.txt
+                shift
+                done;;
 	--help|-h)
 		shift
 		help;;
