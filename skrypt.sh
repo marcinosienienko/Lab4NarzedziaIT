@@ -2,9 +2,11 @@ help()
 {
 echo "Lista dostępnych opcji: "
 echo "--date lub -d #wyświetli dzisiejszą datę"
-echo "--logs lub -l utworzy automatycznie 100 plików logx.txt x-nrpliku od 1 do100 plik zawiera nazwę, nazwę skryptu, datę"
-echo "--logs a lub l a utworzy automatycznie a plików logx.txt x-nr pliku od 1 do 100 plik zawiera nazwę, nazwę skryptu, datę"
+echo "--logs lub -l utworzy automatycznie 100 plików logx/logx.txt x-nrpliku od 1 do100 plik zawiera nazwę, nazwę skryptu, datę"
+echo "--logs a lub l a utworzy automatycznie a plików logx/logx.txt x-nr pliku od 1 do 100 plik zawiera nazwę, nazwę skryptu, datę"
 echo "--help lub -h wyświetli listę dostępnych opcji"
+echo "--init klonuje całe repozytorium do katalogu, e którym został uruchomiony oraz ustawia ścieżkę w zminnej środowiskowej Path"
+echo "--error lub -e utworzy automatycznie zadaną liczbę plików errorx/errorx.txt zawierających nazwę pliku, nazwę skryptu i datę; przy braku zadanej liczby utworzy sto plików"
 }
 
 while [ "$1" != "" ]; do
